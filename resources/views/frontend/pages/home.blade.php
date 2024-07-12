@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from themetechmount.com/html/Textile/home-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 25 May 2024 18:06:45 GMT -->
+    
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -46,7 +45,7 @@
                         <div class="col-xl-3">
                             <!-- site-branding -->
                             <div class="site-branding ">
-                                <a class="home-link" href="index.html" title="Textile" rel="home">
+                                <a class="home-link" href="{{ route('home') }}" title="Textile" rel="home">
                                     <img id="logo-img" height="37" width="138" class="img-fluid auto_size logo-img" src="{{ asset('frontend/images/textileLogo1.png') }}" alt="logo-img">
                                 </a>
                             </div><!-- site-branding end -->
@@ -99,55 +98,41 @@
                                         <nav class="main-menu menu-mobile" id="menu">
                                             <ul class="menu">
                                                 <li class="mega-menu-item active">
-                                                    <a href="#" class="mega-menu-link">Home</a>
+                                                    <a href="{{ route('home') }}" class="mega-menu-link">Home</a>
                                                     
                                                 </li>
                                                 <li class="mega-menu-item">
-                                                    <a href="#" class="mega-menu-link">About Us</a>
+                                                    <a href="{{ route('about') }}" class="mega-menu-link">About</a>
+                                                    
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="{{ route('service') }}" class="mega-menu-link">Services</a>
                                                     <ul class="mega-submenu">
-                                                        <li><a href="about-us.html">About Us 1</a></li>
-                                                        <li><a href="about-us-2.html">About Us 2</a></li>
-                                                        <li><a href="services-1.html">Services 1</a></li>
-                                                        <li><a href="services-2.html">Services 2</a></li>
-                                                        <li><a href="our-team.html">Our Team</a></li>
-                                                        <li><a href="team-details.html">Team Details</a></li>
-                                                        <li><a href="error.html">Error Page</a></li>
+                                                        <li><a href="{{ route('fabricPrinting') }}">Fabric Printing</a></li>
+                                                        <li><a href="{{ route('fabricDyeing') }}">Fabric Dyeing</a></li>
+                                                        <li><a href="{{ route('engineering') }}">Engineering</a></li>
+                                                        <li><a href="{{ route('manufacture') }}">Manufacture</a></li>
+                                                        <li><a href="{{ route('designFabric') }}">We Design Fabric</a></li>
                                                     </ul>
                                                 </li>
                                                 <li class="mega-menu-item">
-                                                    <a href="#" class="mega-menu-link">Services</a>
-                                                    <ul class="mega-submenu">
-                                                        <li><a href="fabric-printing.html">Fabric Printing</a></li>
-                                                        <li><a href="fabric-dyeing.html">Fabric Dyeing</a></li>
-                                                        <li><a href="engineering.html">Engineering</a></li>
-                                                        <li><a href="manufacture.html">Manufacture</a></li>
-                                                        <li><a href="we-design-fabric-2.html">Stich Fabric</a></li>
-                                                        <li><a href="we-design-fabric.html">We Design Fabric</a></li>
-                                                    </ul>
+                                                    <a href="{{ route('product') }}" class="mega-menu-link">Products</a>
                                                 </li>
-                                                <li class="mega-menu-item">
-                                                    <a href="#" class="mega-menu-link">Projects</a>
-                                                    <ul class="mega-submenu">
-                                                        <li><a href="project-style-01.html">Project One</a></li>
-                                                        <li><a href="project-style-02.html">Project Two</a></li>
-                                                        <li><a href="linen-fabric.html">Project Single</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="mega-menu-item">
+                                                {{-- <li class="mega-menu-item">
                                                     <a href="#" class="mega-menu-link">Blog</a>
                                                     <ul class="mega-submenu">
                                                         <li><a href="blog.html">Blog Classic</a></li>
                                                         <li><a href="blog-grid.html">Blog Grid View</a></li>
                                                         <li><a href="blog-single.html">Blog Single View</a></li>
                                                     </ul>
-                                                </li>
+                                                </li> --}}
                                                 <li class="mega-menu-item">
-                                                    <a href="contact-us.html">Contact us</a>
+                                                    <a href="{{ route('contact') }}">Contact</a>
                                                 </li>
                                             </ul>
                                         </nav>
                                         <div class="header_extra d-flex flex-row align-items-center ml-auto">
-                                            <a href="contact-us.html" class="ttm-btn ttm-btn-size-sm ttm-btn-style-fill ttm-btn-shape-square ttm-btn-color-dark">Get Quote</a>
+                                            <a href="{{ route('contact') }}" class="ttm-btn ttm-btn-size-sm ttm-btn-style-fill ttm-btn-shape-square ttm-btn-color-dark">Get Quote</a>
                                             <!-- header_social -->
                                             <div class="header_social">
                                                 <div class="social-icons">
@@ -175,7 +160,7 @@
         <div class="banner_slider_wrapper">
             <div class="banner_slider banner_slider_2">
                 <div class="slide">
-                    <div class="slide_img" style="background-image: url({{ asset('frontend/images/slides/slider-mainbg-003.jpg')}} );"></div>
+                    <div class="slide_img" style="background-image: url({{ asset('frontend/images/slides/cover2.jpg')}} );"></div>
                     <div class="slide__content">
                         <div class="container">
                             <div class="row">
@@ -183,9 +168,9 @@
                                     <div class="slide__content--headings ttm-textcolor-white text-center margin_bottom100 res-991-margin_bottom0">
                                         <span  data-animation="fadeInDown">Where Elegance Meeting Class</span>
                                         <h2  data-animation="fadeInDown" class="border_text">Textile</h2>
-                                        <p  data-animation="fadeInDown">When select the best of your choice sucks, let our fabrics be an be an exception! </p>
+                                        <p  data-animation="fadeInDown">Crafting Quality Fabrics with Precision, Weaving Dreams into Every Stitch, Creating Timeless Elegance for Your Lifestyle! </p>
                                         <div class="d-inline-block margin_top40 res-767-margin_top30" data-animation="fadeInUp" data-delay="1.4">
-                                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">DISCUSS A PROJECT</a>
+                                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" href="{{ route ('contact') }}">DISCUSS A PROJECT</a>
                                         </div>
                                     </div>
                                 </div>
@@ -194,15 +179,15 @@
                     </div>
                 </div>
                 <div class="slide">
-                    <div class="slide_img" style="background-image: url({{ asset('frontend/images/slides/slider-mainbg-004.jpg')}} );"></div>
+                    <div class="slide_img" style="background-image: url({{ asset('frontend/images/slides/cover1.jpg')}} );"></div>
                     <div class="slide__content">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="slide__content--headings ttm-textcolor-white text-center margin_bottom100 res-991-margin_bottom0">
-                                        <span  data-animation="fadeInDown" class="border_text">Since 1970</span>
+                                        <span  data-animation="fadeInDown" class="border_text">Since 2011</span>
                                         <h2  data-animation="fadeInDown">The Easy Fabric Pickings</h2>
-                                        <p  data-animation="fadeInDown">Let's step into enhance your lifestyle like a royalty</p>
+                                        <p  data-animation="fadeInDown">Elevating Style with Luxurious Fabrics and Timeless Craftsmanship.</p>
                                         <div class="d-inline-block margin_top40 res-767-margin_top30" data-animation="fadeInUp" data-delay="1.4">
                                             <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-style-fill ttm-btn-color-skincolor" href="contact-us.html">DISCUSS A PROJECT</a>
                                         </div>
@@ -219,7 +204,6 @@
     
         <!--site-main start-->
         <div class="site-main">
-
 
             <!--padding_zero-section-->
             <section class="ttm-row padding_zero-section clearfix">
@@ -244,7 +228,7 @@
                                             <div class="featured-desc">
                                                 <p>We classified it on the basis of material, design and by craft.</p>
                                             </div>
-                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="we-design-fabric.html">read more<i class="fa fa-long-arrow-right"></i></a>
+                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="{{ route('designFabric') }}">read more<i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div><!-- featured-icon-box end-->
                                 </div>
@@ -261,9 +245,9 @@
                                                 <h3>We Manufacture</h3>
                                             </div>
                                             <div class="featured-desc">
-                                                <p>With its rapid growth over the last four decades, since 1970</p>
+                                                <p>With its rapid growth over the last four decades, since 2011</p>
                                             </div>
-                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="manufacturer.html">read more<i class="fa fa-long-arrow-right"></i></a>
+                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="{{ route('manufacture') }}">read more<i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div><!-- featured-icon-box end-->
                                 </div>
@@ -282,7 +266,7 @@
                                             <div class="featured-desc">
                                                 <p>Textile is a leading export textile service providers globally.</p>
                                             </div>
-                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="we-design-fabric-2.html">read more<i class="fa fa-long-arrow-right"></i></a>
+                                            <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor" href="{{ route('fabricPrinting') }}">read more<i class="fa fa-long-arrow-right"></i></a>
                                         </div>
                                     </div><!-- featured-icon-box end-->
                                 </div>
@@ -299,7 +283,7 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-8 col-sm-8">
                             <div class="ttm_single_image-wrapper">
-                                <img class="img-fluid auto_size" width="569" height="655" src="{{ asset('frontend/images/single-img-03.png')}}" alt="single-03">
+                                <img class="img-fluid auto_size" width="569" height="655" src="{{ asset('frontend/images/about1.jpg')}}" alt="single-03">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12 col-xs-12">
@@ -308,10 +292,10 @@
                                 <div class="section-title">
                                     <div class="title-header">
                                         <h3>WHO WE ARE</h3>
-                                        <h2 class="title">An Ultimate Textile Brand in <b>Market Since 1970</b></h2>
+                                        <h2 class="title">An Ultimate Textile Brand in <b>Market Since 2011</b></h2>
                                     </div>
                                     <div class="title-desc">
-                                        <p>Indian weavers of designer of furnishing fabrics is a textile manufacturer founded in 1970 and renowned for new and stylish interpretations of natural & organic fabrics.  All of our fabrics are designed and woven at our own weaving mill.</p>
+                                        <p>ABC Textile, one of the leading knit composite conglomerates in Bangladesh, experienced its inception in 2001. It is presently an integration of several business units of knitting, dyeing, garments, printing, embroidery and washing.​</p>
                                     </div>
                                 </div><!-- section title end -->
                                 <div class="row">
@@ -341,7 +325,7 @@
             </section>
 
 
-            <section class="ttm-row padding_zero-section bg-layer-equal-height clearfix">
+            {{-- <section class="ttm-row padding_zero-section bg-layer-equal-height clearfix">
                 <div class="container">
                     <div class="row no-gutters ttm-bgcolor-skincolor">
                         <div class="col-lg-6">
@@ -380,7 +364,7 @@
                         </div>
                     </div><!-- row end -->
                 </div>
-            </section>
+            </section> --}}
 
 
 
@@ -567,13 +551,13 @@
                                                         <h4 class="ttm-fid-inner">
                                                             <span   data-appear-animation="animateDigits" 
                                                                     data-from="0" 
-                                                                    data-to="30" 
-                                                                    data-interval="5" 
+                                                                    data-to="12" 
+                                                                    data-interval="1" 
                                                                     data-before="" 
                                                                     data-before-style="sup" 
                                                                     data-after="+" 
                                                                     data-after-style="sub" 
-                                                                    class="numinate">30
+                                                                    class="numinate">12
                                                             </span>
                                                             <span>+</span>
                                                         </h4>
@@ -1074,7 +1058,8 @@
             <!--blog-section end-->
 
 
-        </div><!--site-main end-->
+        </div>
+        <!--site-main end-->
 
 
         <!--footer start-->
